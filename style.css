@@ -1,0 +1,33 @@
+body {
+	min-width: 650px;
+	overflow: auto;
+}
+
+a {
+	border: 0;
+}
+
+.loader {
+	text-align: center;
+}
+
+.item {
+	width: 150px;
+	height: 150px;
+	margin: 5px;
+	display: inline-block;
+	text-align: center;
+	background: #efefef;
+	border: 1px solid #dddddd;
+	overflow: hidden;
+}
+
+.itemImg {
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.message {
+	margin: 15px;
+	text-align: center;
+}

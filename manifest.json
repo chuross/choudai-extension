@@ -1,0 +1,20 @@
+{
+	"name": "Choudai Extension",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"description": "ブログから画像を抽出してきてくれる",
+	"browser_action": {
+		"default_title": "Choudai Extension",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [{
+		"matches": [ "http://*/*", "https://*/*" ],
+		"js": [ "jquery-1.10.2.min.js", "parse.js" ],
+		"css":[ "style.css" ]
+	}]
+}
