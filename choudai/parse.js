@@ -30,7 +30,7 @@ function onSuccess(data) {
 		appendEmpty();
 		return;
 	}
-	$('body').empty();
+	$('.choudai').empty();
 	objects.each(function(index, element) {
 		appendItem(element);
 	});
@@ -44,7 +44,7 @@ function appendItem(element) {
 	if(element.href == null) {
 		return;
 	}
-	$('body').append('<a class="item" href="' + element.href + '" target="blank"><img class="itemImg" src="' + element.href + '" alt="" /></a>');
+	$('.choudai').append('<a class="item" href="' + element.href + '" target="blank"><img class="item_image" src="' + element.href + '" alt="" /></a>');
 }
 
 function onError() {
@@ -52,5 +52,5 @@ function onError() {
 }
 
 function appendMessage(value) {
-	$('body').empty().append('<div class="message">' + value + '</div>');
+	$('.choudai').empty().append('<div class="message">' + value + '</div>');
 }

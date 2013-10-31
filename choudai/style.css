@@ -1,19 +1,19 @@
-body {
+.choudai {
 	min-width: 650px;
 	overflow: auto;
 }
 
-a {
+.choudai a {
 	border: 0;
 }
 
-.loader {
+.choudai .loader {
 	text-align: center;
 }
 
-.item {
-	width: 150px;
-	height: 150px;
+.choudai .item {
+	width: 203px;
+	height: 203px;
 	margin: 5px;
 	display: inline-block;
 	text-align: center;
@@ -22,12 +22,12 @@ a {
 	overflow: hidden;
 }
 
-.itemImg {
-	max-width: 150px;
-	max-height: 150px;
+.choudai .item_image {
+	max-width: 203px;
+	max-height: 203px;
 }
 
-.message {
+.choudai .message {
 	margin: 15px;
 	text-align: center;
 }
