@@ -1,9 +1,14 @@
 {
 	"name": "Choudai Extension",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"manifest_version": 2,
-	"description": "ブログから画像を抽出してきてくれる",
+	"description": "画像ブログから欲しい画像をZIP形式でダウンロードできるようになります",
+	"icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
 	"browser_action": {
+		"default_icon": "icon19.png",
 		"default_title": "Choudai Extension",
 		"default_popup": "popup.html"
 	},
@@ -14,7 +19,18 @@
 	],
 	"content_scripts": [{
 		"matches": [ "http://*/*", "https://*/*" ],
-		"js": [ "jquery-1.10.2.min.js", "parse.js" ],
-		"css":[ "style.css" ]
+		"js": [
+			"lib/jquery-1.10.2.min.js",
+			"lib/ui/jquery-ui-1.10.3.custom.min.js",
+			"lib/jszip/jszip.js",
+			"lib/image_downloader.js",
+			"lib/image_entry_parser.js",
+			"lib/choudai.js",
+			"main.js"
+		],
+		"css": [
+			"lib/ui/jquery-ui-1.10.3.custom.min.css",
+			"style.css"
+		]
 	}]
 }

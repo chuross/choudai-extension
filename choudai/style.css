@@ -1,33 +1,131 @@
-.choudai {
-	min-width: 650px;
+body {
+	margin: 0;
+	padding: 0;
+	background: #efefef;
+}
+
+#choudai-container  {
+	min-width: 800px;
 	overflow: auto;
 }
 
-.choudai a {
+#choudai-container a {
 	border: 0;
 }
 
-.choudai .loader {
+#choudai-container .loader {
+	padding: 10px;
 	text-align: center;
 }
 
-.choudai .item {
-	width: 203px;
-	height: 203px;
+#choudai-container .header {
+	position: relative;
+	width: 790px;
+	height: 35px;
+	padding: 5px 5px 0px 5px;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #212121),
+		color-stop(1, #000000)
+	);
+	background: rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+	position: fixed;
+	z-index: 100;
+}
+
+#choudai-container .header-title {
+	color: #777777;
+	font-size: 12px;
+}
+
+#choudai-container .header input {
+	color: #999999;
+	text-decoration: none;
+	text-align: center;
+	font-size: 13px;
+	padding: 5px 20px;
+	border: 1px solid #444444;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #424242),
+		color-stop(1, #2E2E2E)
+	);
+}
+
+#choudai-container .header input:hover {
+	color: #ffffff;
+}
+
+#choudai-container #download {
+	padding: 20px 100px;
+}
+
+#choudai-container #download .download-status {
+	margin: 10px 0;
+	font-size: 12px;
+}
+
+#choudai-container .download-savezip, #choudai-container .download-checkall, #choudai-container .download-cancelall {
+	height: 30px;
 	margin: 5px;
+	padding: 5px;
+}
+
+#choudai-container .download-ziplink {
+	color: #ffffff;
+	padding: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4fb5f9), color-stop(100%,#2a9dd6));
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+#choudai-container .download-ziplink:hover {
+	background: #2ecce8;
+}
+
+#choudai-container .items {
+	padding: 50px 0 0 0;
+}
+
+#choudai-container .item {
+	position: relative;
+	width: 236px;
+	height: 236px;
+	margin: 5px;
+	padding: 8px;
 	display: inline-block;
 	text-align: center;
-	background: #efefef;
-	border: 1px solid #dddddd;
 	overflow: hidden;
+	z-index: 1;
 }
 
-.choudai .item_image {
-	max-width: 203px;
-	max-height: 203px;
+#choudai-container .item-image-box {
+	width: 236px;
+	height: 236px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
-.choudai .message {
+#choudai-container .item-checkbox {
+	position: absolute;
+}
+
+#choudai-container .item-image {
+	display: inline-block;
+	max-width: 242px;
+	max-height: 242px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80);
+}
+
+#choudai-container .message {
 	margin: 15px;
 	text-align: center;
 }
