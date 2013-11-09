@@ -3,13 +3,35 @@
 <head>
 <meta charset="UTF-8" />
 <title>Choudai Entry Images</title>
-<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="parse.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/ui/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="lib/jszip/jszip.js"></script>
+<script type="text/javascript" src="lib/image_downloader.js"></script>
+<script type="text/javascript" src="lib/image_entry_parser.js"></script>
+<script type="text/javascript" src="lib/choudai.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" href="lib/ui/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="choudai">
+<div id="choudai-container">
+	<div class="header">
+		<span class="header-title">ちょうだい Extension</span>
+		<input class="header-savezip" type="button" value="選択した項目をZIPで保存する" />
+		<input class="header-checkall" type="button" value="全て選択" />
+		<input class="header-cancelall" type="button" value="全て解除" />
+	</div>
 	<div class="loader"><img src="images/loader.gif" alt="" /></div>
+	<div class="items"></div>
+	<div id="download">
+		<div id="download-progress">
+			<div class="download-progress-progressbar"></div>
+			<p class="download-status">進行状況:　<span class="download-status-total">0</span>件中　<span class="download-status-current">0</span>件終了 成功:<span class="download-status-success">0</span> 失敗:<span class="download-status-failed">0</span></p>
+		</div>
+		<div class="download-result">
+			<a class="download-ziplink" href="#">ダウンロード</a>
+		</div>
+	</div>
 </div>
 </body>
 </html>
